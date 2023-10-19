@@ -1,5 +1,5 @@
 name: row_layout
-description: "A simple layout where you can specify the number of rows and then columns in each rows. See also [ColumnLayout](https://pub.dev/packages/row_layout)"
+description: "A simple layout where you can specify the number of rows and then columns in each rows. See also [ColumnLayout](https://pub.dev/packages/column_layout)"
 version: 1.0.1
 homepage: https://boodskap.io
 repository: https://github.com/boodskap/flutter_widgets/tree/main/packages/row_layout

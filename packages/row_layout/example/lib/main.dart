@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:row_layout/row_layout.dart';
 
+/// main method, entry pont of this application
 void main() {
   runApp(const MyApp());
 }
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+/// A simple stateful home page widget to show the **row_layout**
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -33,7 +35,9 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
+/// internal state of home page widget
 class _MyHomePageState extends State<MyHomePage> {
+  /// default method to render this widget
   @override
   Widget build(BuildContext context) {
     final List<Alignment> alignments = [

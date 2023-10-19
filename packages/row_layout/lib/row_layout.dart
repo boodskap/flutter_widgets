@@ -59,6 +59,7 @@ class RowLayout extends StatefulWidget {
   State<RowLayout> createState() => _RowLayoutState();
 }
 
+/// Internal state of the widget
 class _RowLayoutState extends State<RowLayout> {
   Widget _createPlacement(int row, int col, int flex, Widget child) {
     return Expanded(
@@ -82,7 +83,8 @@ class _RowLayoutState extends State<RowLayout> {
     );
   }
 
-  Widget buildRow(int idx, int flex) {
+  /// method to buila a row along with cels and render the child component
+  Widget _buildRow(int idx, int flex) {
     List<Widget> children = [];
 
     for (int i = 0; i < widget.cols[idx]; i++) {
@@ -96,11 +98,12 @@ class _RowLayoutState extends State<RowLayout> {
     );
   }
 
+  /// method to build all rows of the layout
   Widget _buildRows() {
     List<Widget> children = [];
 
     for (int i = 0; i < widget.rows; i++) {
-      var inside = buildRow(i, 1);
+      var inside = _buildRow(i, 1);
       var child = Expanded(
         flex: widget.rowFlex[i],
         child: inside,
@@ -113,6 +116,7 @@ class _RowLayoutState extends State<RowLayout> {
     );
   }
 
+  /// default method to build this widget
   @override
   Widget build(BuildContext context) {
     return Stack(
