@@ -1,6 +1,6 @@
 name: row_layout
-description: "A simple layout where you can specify the number of rows and then columns in each rows. Very complex layouts can be achieved by combinations of RowLayout and [ColumnLayout](https://github.com/boodskap/flutter_widgets/tree/main/packages/column_layout)"
-version: 1.0.0
+description: "A simple layout where you can specify the number of rows and then columns in each rows. See also [ColumnLayout](https://pub.dev/packages/row_layout)"
+version: 1.0.1
 homepage: https://boodskap.io
 repository: https://github.com/boodskap/flutter_widgets/tree/main/packages/row_layout
 publish_to:
