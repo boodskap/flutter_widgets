@@ -93,8 +93,22 @@ class _RowLayoutState extends State<RowLayout> {
       children.add(child);
     }
 
-    return Row(
-      children: children,
+    if (children.isEmpty) {
+      children.add(Expanded(
+          child: Container(
+        alignment: Alignment.center,
+        child: Text(
+          'empty',
+          textAlign: TextAlign.center,
+        ),
+      )));
+    }
+
+    return Container(
+      decoration: widget.decoration,
+      child: Row(
+        children: children,
+      ),
     );
   }
 
@@ -111,6 +125,14 @@ class _RowLayoutState extends State<RowLayout> {
       children.add(child);
     }
 
+    if (children.isEmpty) {
+      children.add(Expanded(
+          child: Container(
+        alignment: Alignment.center,
+        child: Text('empty'),
+      )));
+    }
+
     return Column(
       children: children,
     );
@@ -119,14 +141,10 @@ class _RowLayoutState extends State<RowLayout> {
   /// default method to build this widget
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          color: widget.background,
-          width: MediaQuery.of(context).size.width,
-          child: _buildRows(),
-        ),
-      ],
+    return Container(
+      color: widget.background,
+      width: MediaQuery.of(context).size.width,
+      child: _buildRows(),
     );
   }
 }

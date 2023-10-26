@@ -94,4 +94,4 @@ class _MyHomePageState extends State<MyHomePage> {
 ```
 
 ## Screenshots
-![image example](https://github.com/boodskap/flutter_widgets/tree/main/packages/row_layout/example/assets/example1.png)
+<img alt="screenshot" width="600" src="https://github.com/boodskap/flutter_widgets/tree/main/packages/row_layout/example/assets/example1.png">
